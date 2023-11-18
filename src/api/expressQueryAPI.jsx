@@ -5,7 +5,6 @@ export default async function expressQueryAPI(query = "remaining") {
     return await fetch("../../public/remaining.json")
       .then(async (res) => {
         // @QueryTest - uncomment to test query
-        const response = await res.json();
         console.log("Remaining Response: ", response);
         return [...response];
       })
