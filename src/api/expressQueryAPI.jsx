@@ -5,14 +5,14 @@ export default async function expressQueryAPI(query = "remaining") {
     return await fetch("../../public/remaining.json")
       .then(async (res) => {
         // @QueryTest - uncomment to test query
-        console.log("Remaining Response: ", response);
-        return [...response];
+        console.log("Remaining Response: ", remaining);
+        return [...remaining];
       })
       .catch((error) => {
         console.error(`Error: unable to fetch ${query} from server`, error);
       });
   } catch (error) {
-    return remaining;
-    console.error(error.message);
+    return [...remaining];
+    // console.error(error.message);
   }
 }
