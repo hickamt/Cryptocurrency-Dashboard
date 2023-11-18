@@ -1,0 +1,20 @@
+.chart-div {
+  padding-bottom: 1rem;
+}
+
+.line-chart,
+.line-compare {
+  display: flex;
+  align-items: center;
+}
+
+canvas {
+  width: 725px;
+  height: 735px;
+}
+
+.doughnut-chart {
+  margin-top: 1em;
+  width: 100%;
+  height: 24em;
+}

@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/* GLOBAL COLOR SCHEME */
+:root {
+  --primary: blue; /* blue */
+  --secondary: #272b33; /* grey */
+  --success: green; /* green */
+  --danger: red; /* red */
+  --warning: yellow; /* yellow */
+  --info: #4d4dff; /* neon-blue */
+  --light: white; /* white */
+  --off-black: #010409; /* off black */
+  --black: #090909; /* root background black */
+
+  /* Gold Theme */
+  --gold-bg: #150d07;
+  --gold-bg-dark: #101010; /* dark grey */
+  --gold-light: #4a4537;
+
+  /* Blue Theme */
+  --blue-bg: rgba(4, 59, 92, 0.5);
+  --blue-bg-dark: rgba(44, 62, 80, 0.5); /* madison  */
+  --blue-light: rgba(11, 127, 171, 0.5);
+
+  /* Grey Theme */
+  --grey-bg: #2b2b2b;
+  --grey-bg-dark: #0c0c0c;
+  --grey-light: #484848;
+}
+
+#root {
+  background-color: var(--off-black);
+  background-size: cover;
+}
+
+body {
+  margin: 0 auto;
+  background-color: var(--off-black);
+  background-repeat: no-repeat;
+  color: var(--light);
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.navLogo {
+  width: 3em;
+  height: 3em;
+}
+
+img.navLogo:hover {
+  transform: scale(1.1);
+  transition: transform 0.5s ease-in-out;
+  background: var(--blue-light);
+  border-radius: 3rem;
+}

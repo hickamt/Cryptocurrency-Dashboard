@@ -1,0 +1,134 @@
+/* Main View Grid | sidebar & main-view-container */
+.sidebar-image {
+  position: absolute;
+  height: 5.5em;
+  width: 4em;
+  margin-left: 1.5em;
+  margin-top: 1.5em;
+}
+
+.dashboard-container {
+  grid-area: view;
+}
+
+.sidebar-charts,
+.sidebar-analyze {
+  padding-bottom: 0.5em;
+  border-bottom: 2px solid var(--blue-light);
+}
+
+.sidebar {
+  background-color: var(--blue-bg);
+  grid-area: sidebar;
+  margin: 1em 0 1em 0;
+  border-radius: 0.5em;
+  padding: 0.35em;
+}
+
+.main-view-container {
+  margin-left: 1em;
+  display: grid;
+  grid-template-columns: 5fr 95fr;
+  grid-template-areas:
+    "sidebar view"
+    "sidebar view";
+}
+
+.sidebar .card-btn {
+  width: 7rem;
+  background-color: var(--off-black);
+  color: var(--light);
+  border: none;
+  font-size: 20px;
+  transition: transform 0.5s ease-in-out;
+  border: 1px solid var(--blue-light);
+  border-radius: 12px;
+}
+
+.sidebar:hover .card-btn:hover {
+  background-color: var(--blue-light);
+  transform: scale(1.05);
+  transition: transform 0.5s ease-in-out;
+  border-radius: 20px;
+}
+
+.login-btn,
+.logout-btn {
+  width: 7em;
+  background-color: var(--off-black);
+  color: var(--light);
+  border-radius: 12px;
+  border: 1px solid var(--blue-light);
+  transition: transform 0.5s ease-in-out;
+}
+
+.login-btn:hover,
+.logout-btn:hover {
+  background-color: var(--blue-light);
+  transform: scale(1.05);
+  color: var(--light);
+  transition: transform 0.5s ease-in-out;
+  border-radius: 20px;
+}
+
+/* Sidebar Grid Rows */
+.sidebar-header-space {
+  grid-area: header;
+}
+
+.sidebar-chart-view {
+  grid-area: charts;
+}
+
+.sidebar-asset-view {
+  grid-area: assets;
+}
+
+.sidebar {
+  display: grid;
+  grid-template-rows: 8em 26em;
+  grid-template-areas:
+    "header"
+    "charts"
+    "assets";
+}
+
+/* Inner Grid Area */
+.main-header,
+.main-footer {
+  background-color: var(--blue-bg);
+  border-radius: 0.5em;
+}
+
+.main-header {
+  grid-area: header;
+  background-size: cover;
+  /* padding-top: 1em; */
+}
+
+.main-view {
+  margin: 0 auto;
+  grid-area: main;
+  min-height: 25em;
+}
+
+.main-footer {
+  display: flex;
+  align-items: center;
+  min-height: 30em;
+  margin: 1em 0 1em 0;
+  grid-area: footer;
+  background-size: cover;
+  background-position: bottom;
+}
+
+.dashboard-container {
+  margin: 0 1rem;
+  display: grid;
+  overflow-x: hidden;
+  grid-template-rows: auto auto 45fr;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
